@@ -18,12 +18,12 @@ Estrutura preparada para automação (execução agendada)
 # Arquitetura do Projeto
 
 O projeto foi estruturado seguindo separação de responsabilidades:
-
-desafio_rpa/
+```powershell
+desafioTecnico/
 │
 ├── data/               # Arquivo CSV de entrada
 ├── output/             # Relatórios gerados
-├── src/
+├── src/ 
 │   ├── config.py       # Configurações e paths
 │   ├── loader.py       # Camada de leitura de dados
 │   ├── processor.py    # Regras de negócio
@@ -33,7 +33,7 @@ desafio_rpa/
 ├── main.py             # Orquestrador do pipeline
 ├── requirements.txt
 └── README.md
-
+```
 # Requisitos
 
 Python 3.10+
@@ -42,14 +42,18 @@ pip
 
 # Instalação Passo a Passo
 
-1️⃣ Clonar o repositório
-git clone <URL_DO_REPOSITORIO>
-cd desafio_rpa
+## 1 Clonar o repositório
+```bash
+git clone https://github.com/WevertonAG/desafioTecnico
+cd desafioTecnico
+```
 
 Ou baixar e extrair manualmente.
 
-2️⃣ Criar ambiente virtual
+## 2 Criar ambiente virtual
+```bash
 python -m venv venv
+```
 
 Windows:
 venv\Scripts\activate
@@ -59,8 +63,10 @@ source venv/bin/activate
 
 Se ativado corretamente, aparecerá (venv) no terminal.
 
-3️⃣ Instalar dependências
+## 3 Instalar dependências
+```bash
 pip install -r requirements.txt
+```
 
 # Dados de Entrada
 
@@ -69,23 +75,24 @@ O arquivo de entrada deve estar em:
 data/pedidos.csv
 
 Formato esperado:
-
+```csv
 pedido,cliente,data_embarque,produto,quantidade,valor_unitario
 1001,Cliente A,2026-02-20,Produto X,10,50
+```
 
-▶️ Executando o Projeto
+# ▶️ Executando o Projeto
 
 Para executar o pipeline completo:
-
+```bash
 python main.py
+```
 
-
-Saída esperada no terminal:
+## Saída esperada no terminal:
 
 Iniciando pipeline...
 Pipeline finalizado com sucesso.
 
-📊 Saída Gerada
+## Saída Gerada
 
 O sistema gera automaticamente:
 
@@ -98,15 +105,14 @@ Aba 1: Fila_Frete (ordenada por data de embarque)
 
 Aba 2: Total_por_Cliente (agregado para análise em BI)
 
-🔄 Automação (Opcional)
+# Automação (Opcional)
 
-Para simular execução agendada:
-
-Editar main.py para chamar:
-
+Para simular execução agendada:<br>
+```python
 from src.automation import start_scheduler
 start_scheduler()
-
+```
+elas estão comentadas no código basta tirar o comentário
 
 Ou agendar via:
 
@@ -114,7 +120,7 @@ Agendador de Tarefas do Windows
 
 Cron (Linux)
 
-Decisões Técnicas
+## Decisões Técnicas
 
 Separação em camadas (Loader, Processor, Report)
 
@@ -126,18 +132,6 @@ Preparado para integração com Power BI
 
 Código preparado para testes unitários futuros
 
-🚀 Possíveis Evoluções
+## Autor
 
-Logging estruturado
-
-Persistência em banco de dados
-
-API REST
-
-Containerização com Docker
-
-Testes automatizados
-
-Autor
-
-Desenvolvido como parte de avaliação técnica para vaga de Automação / RPA / Python.
+Desenvolvido como parte de avaliação técnica para vaga de Analista de TI por Weverton Guimarães.
