@@ -54,13 +54,16 @@ Ou baixar e extrair manualmente.
 ```bash
 python -m venv venv
 ```
-
+Para ativar o venv:
 Windows:
+```bash
 venv\Scripts\activate
+```
 
 Linux / Mac:
+```bash
 source venv/bin/activate
-
+```
 Se ativado corretamente, aparecerá (venv) no terminal.
 
 ## 3 Instalar dependências
