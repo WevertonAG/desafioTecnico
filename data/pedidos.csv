@@ -1,0 +1,5 @@
+pedido,cliente,data_embarque,produto,quantidade,valor_unitario
+1001,Cliente A,2026-02-20,Produto X,10,50
+1002,Cliente B,2026-02-18,Produto Y,5,80
+1003,Cliente A,2026-02-18,Produto Z,2,200
+1004,Cliente C,2026-02-22,Produto X,8,50
